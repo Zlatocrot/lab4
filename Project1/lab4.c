@@ -18,6 +18,7 @@ int main() {
 
     printf("\nЗадание 3\n");
     int N;
+
     printf("введите трехзначное число: ");
     scanf_s("%d", &N);
     prac3(N);
