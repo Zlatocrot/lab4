@@ -48,7 +48,7 @@ void prac1()
     printf("double: %e\n", d);
     printf("\nввод значений\n");
     printf("введите символ (char): ");
-    scanf_s(" %c", &c);
+    scanf_s("%c", &c);
     printf("введите целое число (int): ");
     scanf_s("%d", &i);
     printf("введите число с плавающей точкой (float): ");
@@ -79,7 +79,7 @@ void prac1()
     printf("введите целое число i: ");
     scanf_s("%d", &i1);
     double otv = 1.0 / i1;
-    printf("1/%d:=%g\n", i1, otv);
+    printf("1/%d=%g\n", i1, otv);
 }
 
 int prac2()
@@ -131,11 +131,26 @@ int prac3(int N)
     return 0;
 }
 
+void yes()
+{
+    printf("чётную кнопку\n");
+}
+
+void no()
+{
+    printf("нечётную кнопку\n");
+}
+
 int dz4(int A, int B)
 {
+    int t1 = A % 2, t2 = B % 2;
     int uslovie = (A % 2 == 0 && B % 2 == 1) || (A % 2 == 1 && B % 2 == 0);
-    printf("игрок A нажал %s кнопку.\n", (A % 2 == 0) ? "ЧЁТНУЮ" : "НЕЧЁТНУЮ");
-    printf("игрок B нажал %s кнопку.\n", (B % 2 == 0) ? "ЧЁТНУЮ" : "НЕЧЁТНУЮ");
 
-    return uslovie;
+    printf("Игрок А нажал ");
+    t1 > 0 && (no(), 1) || (yes(), 1);
+
+    printf("Игрок В нажал ");
+    t2 == 0 && (yes(), 1) || (no(), 1);
+
+    return  uslovie;
 }
